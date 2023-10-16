@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rail Fence Cipher Encryption</title>
+</head>
+<body>
+    <h1>Rail Fence Cipher Encryption</h1>
+    <label for="messageInput">Enter Message:</label>
+    <input type="text" id="messageInput">
+    <br>
+    <label for="depthInput">Rail Depth:</label>
+    <input type="number" id="depthInput" min="2">
+    <br>
+    <label for="repeatInput">Repeat Count:</label>
+    <input type="number" id="repeatInput" min="1">
+    <br>
+    <button onclick="performEncryption()">Encrypt</button>
+    <br>
+    <p>Encrypted Message:</p>
+    <textarea id="encryptedMessageOutput" rows="4" cols="50" readonly></textarea>
+
+    <script>
+        function performEncryption() {
+            const originalMessage = document.getElementById("messageInput").value.toLowerCase().replace(/\s/g, "");
+            const railDepth = parseInt(document.getElementById("depthInput").value);
+            const repetitionCount = parseInt(document.getElementById("repeatInput").value);
+
+            if (!originalMessage || isNaN(railDepth) || isNaN(repetitionCount) || railDepth < 2 || repetitionCount < 1) {
+                alert("Invalid input. Please provide a valid message, rail depth (>= 2), and repetition count (>= 1).");
+                return;
+            }
+
+            let encryptedMessage = "";
+
+            for (let repetition = 0; repetition < repetitionCount; repetition++) {
+                let rails = Array.from({ length: railDepth }, () => []);
+                let railPosition = 0;
+                let railDirection = 1;
+
+                for (let charIndex = 0; charIndex < originalMessage.length; charIndex++) {
+                    rails[railPosition].push(originalMessage[charIndex]);
+                    railPosition += railDirection;
+
+                    if (railPosition === 0 || railPosition === railDepth - 1) {
+                        railDirection *= -1;
+                    }
+                }
+
+                encryptedMessage += rails.flat().join("");
+            }
+
+            document.getElementById("encryptedMessageOutput").value = encryptedMessage;
+        }
+    </script>
+</body>
+</html>
+
