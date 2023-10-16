@@ -65,11 +65,11 @@ The use of this container is limited only to executing the image previously crea
 ```bash
 docker run -d -p 8181:8181 --name encrypt deimergrueso/nginx-encrypt:latest
 ```
-Image --
+![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/Docker_Encrypt_ps.png)
 
 Go to the web browser using your computer's IP address or using localhost:8181 as the destination address
 
-Image --
+![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/UI_Encryption.png)
 
 ## Decrypt
 ## Specifications
@@ -137,4 +137,4 @@ docker run -d -p 8080:8080 --name decrypt deimergrueso/nginx-decrypt:latest
 
 Go to the web browser using your computer's IP address or using localhost:8080 as the destination address
 
-Image --
+![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/UI_Decryption.png)
