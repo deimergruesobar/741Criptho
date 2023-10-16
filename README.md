@@ -144,11 +144,11 @@ Go to the web browser using your computer's IP address or using localhost:8080 a
 
 
 Encrypt using (4,5): “CRYPTOLOGY IS THE PRACTICE AND STUDY OF TECHNIQUES FOR SECURE COMMUNICATION IN THE PRESENCE OF THIRD PARTIES CALLED ADVERSARIES”
-![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/UI_Decryption.png)
+![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/Test_Encryption.png)
 
 Decrypt using (3): “TPSNIONFRMHANOIREEOIBTSEAKLAPSEHISOBPEGTBRQREPTTMHRTHTTAWE AACTFVAECAOLHANSEEKFHALOITUEEAICNLEYOLTOLEPADFKATATSJMSIINSH ROCTITRIEEAKYNHYUEOTTSTATSIIRSARERUYUEDPCLETEROINEIYEHC"
 
-![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/Docker_Decrypt_ps.png)
+![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/Test_Decryption.png)
 
 
 
