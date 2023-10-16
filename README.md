@@ -72,6 +72,43 @@ Go to the web browser using your computer's IP address or using localhost:8181 a
 ![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/UI_Encryption.png)
 
 ## Decrypt
+## Seudocode
+
+```
+Procedure decryptMessage():
+    Read encryptedMessage from "encryptedMessageOutput" textarea
+    Read depth from "depthInput" input
+    Read repeat from "repeatInput" input
+
+    If encryptedMessage is empty or depth is not an integer or repeat is not an integer or depth < 2 or repeat < 1:
+        Display error: "Invalid input. Please provide a valid message, depth (>= 2), and repeat (>= 1)."
+        Return
+
+    Initialize decryptedMessage as an empty string
+    Initialize railPositions as an array of zeros with a size of depth
+    Set direction to 1
+
+    Calculate railLengths, an array of zeros with a size of depth
+    For i from 0 to depth - 1:
+        railLengths[i] = length(encryptedMessage) / repeat
+
+    Fill railPositions
+    For i from 1 to depth - 1:
+        railPositions[i] = railPositions[i - 1] + railLengths[i]
+
+    Decrypt the message
+    For i from 0 to depth - 1:
+        Let railStart be railPositions[i]
+        Let railEnd be railPositions[i] + railLengths[i]
+
+        For j from railStart to railEnd - 1:
+            Append encryptedMessage[j] to decryptedMessage
+
+    Display decryptedMessage in a textarea or output it to the user
+End Procedure
+
+```
+## Decrypt
 ## Specifications
 
 The code will ignore spaces and will convert all input is lower case.
