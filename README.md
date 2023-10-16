@@ -138,3 +138,17 @@ docker run -d -p 8080:8080 --name decrypt deimergrueso/nginx-decrypt:latest
 Go to the web browser using your computer's IP address or using localhost:8080 as the destination address
 
 ![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/UI_Decryption.png)
+
+
+## Testing 
+
+
+Encrypt using (4,5): “CRYPTOLOGY IS THE PRACTICE AND STUDY OF TECHNIQUES FOR SECURE COMMUNICATION IN THE PRESENCE OF THIRD PARTIES CALLED ADVERSARIES”
+![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/UI_Decryption.png)
+
+Decrypt using (3): “TPSNIONFRMHANOIREEOIBTSEAKLAPSEHISOBPEGTBRQREPTTMHRTHTTAWE AACTFVAECAOLHANSEEKFHALOITUEEAICNLEYOLTOLEPADFKATATSJMSIINSH ROCTITRIEEAKYNHYUEOTTSTATSIIRSARERUYUEDPCLETEROINEIYEHC"
+
+![Alt text](https://github.com/deimergruesobar/741Crypto/blob/main/Img/Docker_Decrypt_ps.png)
+
+
+
